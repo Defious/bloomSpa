@@ -8,5 +8,14 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
+}
+
+.reservation {
+  background-color: #99C1A9;
+  border-radius: 3px;
+  transition: 0.2s;
+  &:hover {
+    background-color: #A8D6BC;
+  }
 }

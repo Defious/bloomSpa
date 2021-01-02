@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.moi {
+  display: flex;
+  margin-top: 30px;
+}
+
+.photo img {
+  width: 470px;
+}
+
+.size {
+  margin: auto 20px;
+}
+
+.contact {
+  background-color: #99C1A9;
+  height: 300px;
+}

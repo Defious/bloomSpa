@@ -1,0 +1,40 @@
+h2 {
+  text-align: center;
+}
+
+input[type="text"], textarea {
+  background-color : #99C1A9;
+  border: none;
+  border-bottom: 5px solid #A8D6BC;
+  border-radius: 5px;
+}
+
+label {
+  display: none;
+}
+
+.namemail {
+  display:flex;
+}
+
+.contact {
+  text-align:center;
+}
+
+.namemail {
+  display: inline-flex;
+}
+
+.notodisplay {
+  display:none;
+}
+
+.button{
+  display: inline-block;
+  background-color: #A8D6BC;
+  text-align: center;
+  transition: 0.2s;
+  border: none;
+  border-radius: 19px;
+}
+

@@ -14,14 +14,15 @@
   </div>
 </div>
   <div class="green">
+    <div class="container">
     <div class="presta row">
-      <div class="col-6" style="background-image: url(https://res.cloudinary.com/duf8mmjpl/image/upload/v1610127748/joues_wfvzmy.png">
+      <div class="col-12 col-lg-6" style="background-image: url(https://res.cloudinary.com/duf8mmjpl/image/upload/v1610127748/joues_wfvzmy.png">
           <div class="overlay">
             <h4>Yoga</h4>
             <p><small>Offrez le meilleur à votre corps grâce à une fabuleuse séance de Yoga  !</small></p>
           </div>
       </div>
-      <div class="col-6" style="background-image: url(https://res.cloudinary.com/duf8mmjpl/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1610127759/toa-heftiba-rjGFEm3Bd5o-unsplash_dzh5ja.jpg">
+      <div class="col-12 col-lg-6" style="background-image: url(https://res.cloudinary.com/duf8mmjpl/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1610127759/toa-heftiba-rjGFEm3Bd5o-unsplash_dzh5ja.jpg">
           <div class="overlay">
             <h4>Yoga</h4>
             <p><small>Offrez le meilleur à votre corps grâce à une fabuleuse séance de Yoga  !</small></p>
@@ -29,8 +30,8 @@
       </div>
     </div>
   </div>
-
-  <div class="container">
+</div>
+<div class="container">
   <div class="row">
     <div class="col-12 col-lg-4">
       <%= image_tag "home.svg" %>
@@ -52,7 +53,7 @@
 </div>
 
 </div>
-<div class="contact mt-5">
+<div class="mt-5" id="contact">
   <h2 class="py-3">Me contacter</h2>
   <div class="mecontacter container">
     <%= form_for Contact.new, url: home_index_path do |f| %>

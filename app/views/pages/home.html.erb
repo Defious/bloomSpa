@@ -56,7 +56,7 @@
 <div class="mt-5" id="contact">
   <h2 class="py-3">Me contacter</h2>
   <div class="mecontacter container">
-    <%= form_for Contact.new, url: home_index_path do |f| %>
+    <%= form_for Contact.new, url: root_path do |f| %>
     <% if flash[:error].present? %>
         <p> flash[:error]</p>
     <% end %>

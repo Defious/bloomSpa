@@ -37,6 +37,10 @@ label {
   border: none;
   border-radius: 19px;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #546159;
+  opacity: 1; /* Firefox */
+}
 
 html {
   scroll-behavior: smooth;

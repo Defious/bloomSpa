@@ -1,19 +1,8 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :new, :create ]
 
   def home
-  end
-
-  def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.deliver
-      flash.now[:error] = nil
-  redirect_to root_path, notice: 'Message sent successfully'
-    else
-      flash.now[:error] = 'Cannot send message'
-      render :new
-    end
+    @contact = Contact.new
   end
 
 end

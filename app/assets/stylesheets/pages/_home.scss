@@ -10,11 +10,12 @@ h1 {
 }
 
 .photo img {
-  width: 300px;
+  width: 260px;
 }
 
 .size {
   margin: auto 20px;
+  text-align:center;
 }
 
 #contact {
@@ -58,6 +59,9 @@ h4 {
   margin: auto -60px;
 
 }
+.italique {font-style: italic;}
+
+
 .overlay
 {
     background: rgba(255,255,255,0.75);

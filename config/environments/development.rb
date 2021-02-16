@@ -1,5 +1,4 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -30,7 +29,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -50,6 +49,7 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -59,22 +59,4 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-    config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-
-  config.action_mailer.delivery_method = :smtp
-
-host = "https://bloomspa.herokuapp.com"
-
-config.action_mailer.default_url_options = { host: host }
-
-config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :user_name            => ENV['SMTP_USER_NAME'],
-  :password             => ENV['SMTP_PASSWORD'],
-  :authentication       => "plain",
-  :enable_starttls_auto => true
-}
 end

@@ -5,11 +5,22 @@
     margin: 0 20px;
     box-shadow: 0px 0px 3px grey;
 }
+.fond {
+  background: url(https://images.unsplash.com/photo-1546387903-6d82d96ccca6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+  background-size: cover;
+  background-position-x: right;
+}
+
+.fond div h1 {
+ font-size: 50px;
+}
+
 
 .box-cards {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+  width:100%;
 }
 
 .box-cards > button {
@@ -33,13 +44,13 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -60,6 +71,12 @@
 
 .cards h2 {
   color:#99C1A9;
+}
+
+.card-soins p {
+  font-size: 20px;
+  padding-top: 30px;
+  margin: 0px;
 }
 
 .cards {

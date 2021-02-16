@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
-Treatement.destroy_all
-Prestation.destroy_all
+Treatement.delete_all
+Prestation.delete_all
 
 puts "creating treatement"
 
@@ -15,6 +16,8 @@ Treatement.create(
   time: "30 min",
   price: 50,
   )
+
+puts "first done"
 
 Treatement.create(
   time: "60 min",
@@ -26,34 +29,30 @@ Treatement.create(
   price: 105,
   )
 
-
 puts " creating prestations"
 
 Prestation.create(
-  name: "Soin coup d’éclat",
+  name: "Soin express",
   time: "30 min",
-  description: "Un soin lumineux pour un coup d’éclat immédiat, il donne un teint unifié et nacré à la peau.",
+  description: "Un coup d’éclat immédiat.",
   session: "head"
   )
 Prestation.create(
-  name: "Soin créateur",
-  time: "60 min",
-  description: "Parce que chaque peau est unique, ce soin réponds parfaitement à votre « Moment de Peau » tout
-au long de l’année.",
+  name: "Soin sur-mesure",
+  time: "60 min/90min",
+  description: "Soin personnalisé: selon votre Instant de peau",
   session: "head"
   )
 Prestation.create(
-  name: "Secret de jeunesse ",
+  name: "Soin jeunesse ",
+  time: "60 min/90 min",
+  description: "Allie soins sur-mesure et modelage KOBIDO.",
+  session: "head"
+  )
+Prestation.create(
+  name: "Soin Signature au Quartz",
   time: "90 min",
-  description: "Le soin de beauté le plus précieux pour garder un grain de peau lisse, ferme et lumineux. Il allie un
-soin du visage avec un modelage au choix du dos ou bien des mains et des pieds.",
-  session: "head"
-  )
-Prestation.create(
-  name: "Modelage KOBIDO",
-  time: "30 min",
-  description: "Véritable soin anti-âge, ce lifting manuel inspiré du massage japonais « Ko Bi Do », agit en profondeur
-sur les rides, la fermeté, et l’éclat du teint.",
+  description: "Relaxe et adoucit les traits du visage en agissant sur les neurotransmetteurs.",
   session: "head"
   )
 
@@ -65,55 +64,40 @@ comme après une séance au hammam.",
   session: "body"
   )
 Prestation.create(
-  name: "Gommage à la pierre d’alun",
+  name: "Gommage corps",
   time: "30 min",
-  description: "Sa formulation exclusive alliant l&#39;action astringente de la pierre d&#39;alun aux propriétés
-nourrissantes et régénérantes du miel à la gelée royale pour une solution exfoliante efficace,
-naturelle et durable pour votre corps.",
-  session: "body"
-  )
-Prestation.create(
-  name: "Rituel du cheveux",
-  time: "30 min",
-  description: "Soin intense relaxant pour des cheveux gainés, nourris et brillants.",
+  description: "Adoucit le grain de peau.",
   session: "body"
   )
 
 Prestation.create(
   name: "Modelage sur-mesure",
   time: "30 min/60 min/90 min",
-  description: "Qui de mieux que vous-même pour savoir ce dont vous avez besoin ? C’est la genèse de notre
-soin sur-mesure.",
+  description: "Le soin à votre image: selon vos besoins et vos attentes",
   session: "massage"
   )
 Prestation.create(
   name: "Modelage Californien",
   time: "30 min/60 min/90 min",
-  description: "Souhaitant apaiser vos tensions et diminuer votre stress, et qui cherchent un massage doux et
-enveloppant ce modelage est pour vous.",
+  description: "Doux et enveloppant.",
   session: "massage"
   )
 Prestation.create(
-  name: "Modelage Deep-Tissue",
+  name: "Modelage Deep-Pression",
   time: "30 min/60 min/90 min",
-  description: "Ce modelage alterne techniques de pétrissages profonds, d’étirements doux et ciblé. Une échappée
-idéale pour retrouvé tonicité, souplesse et dénouer les tensions de la journée.",
+  description: "Profond et musculaire.",
   session: "massage"
   )
 Prestation.create(
-  name: "Modelage Ayurvédique",
-  time: "30 min/60 min/90 min",
-  description: "Un modelage rythmé et dynamique empruntant des techniques de tradition indienne. La peau
-s’échauffe, les muscles du corps entier se relâchent. Le corps et l’esprit font le plein de vitalité, pour
-un regain d’énergie.",
+  name: "Modelage Bloom'védique",
+  time: "60 min/90 min",
+  description: "Puissant et rythmé.",
   session: "massage"
   )
 Prestation.create(
   name: "Modelage des bols chantants",
-  time: "30 min/60 min/90 min",
-  description: "Un massage atypique réunissant les techniques de 3 cultures : Chine, Malaisie, Inde. Il cible les
-tensions émotionnelles et rééquilibre les énergies afin de chasser la fatigue du corps et de l’esprit
-pour obtenir un véritable lâcher-prise.",
+  time: "60 min/90 min",
+  description: "Energique et anti-stress.",
   session: "massage"
   )
 

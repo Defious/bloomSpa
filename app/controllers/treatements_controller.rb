@@ -37,6 +37,6 @@ class TreatementsController < ApplicationController
   private
 
   def treatement_params
-    params.require(:treatement).permit(:time, :price)
+    params.require(:treatement).permit(:time, :price, :photo)
   end
 end
